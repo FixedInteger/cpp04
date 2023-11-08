@@ -15,26 +15,6 @@
         virtual void makeSound() const;
  };
 
- class Dog : public Animal
- {
-     public:
-        Dog();
-        virtual ~Dog();
-        Dog(const Dog &copy);
-        Dog &operator=(const Dog &copy);
-        virtual void makeSound() const;
- };
-
-class Cat : public Animal
-{
-    public:
-        Cat();
-        virtual ~Cat();
-        Cat(const Cat &copy);
-        Cat &operator=(const Cat &copy);
-        virtual void makeSound() const;
-};
-
 class WrongAnimal
 {
     protected:

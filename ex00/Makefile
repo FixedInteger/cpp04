@@ -3,7 +3,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = program
 
 SRC = Animal.cpp \
-	  main.cpp wrong.cpp
+	  main.cpp wrong.cpp \
+	  Cat.cpp \
+	  Dog.cpp \
 
 all: $(NAME)
 

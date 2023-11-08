@@ -6,17 +6,10 @@ void ff()
 }
 int main()
 {
-    std::atexit(ff);
-  Animal* animals[4];
-    for (int i = 0; i < 4; i++)
+    // std::atexit(ff);
+    Dog dog;
     {
-        if (i % 2 == 0)
-        animals[i] = new Dog();
-        else
-        animals[i] = new Cat();
+        Dog a = dog ;
     }
-    for (int i = 0; i < 4; i++)
-    {
-        delete animals[i];
-    }
+
 }

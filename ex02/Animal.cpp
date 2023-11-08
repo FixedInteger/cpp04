@@ -51,7 +51,10 @@ Dog &Dog::operator=(const Dog &copy)
 {
     std::cout << "Dog operator= called" << std::endl;
     if (this != &copy)
+    {
+        this->brain = new Brain(*copy.brain);
         this->type = copy.type;
+    }
     return *this;
 }
 
@@ -65,8 +68,6 @@ Cat::Cat() : Animal()
 Animal::~Animal()
 {
     std::cout << "Animal destructor called" << std::endl;
-
-
 }
 Cat::~Cat()
 {
@@ -83,8 +84,13 @@ Cat::Cat(const Cat &copy) : Animal(copy)
 Cat &Cat::operator=(const Cat &copy)
 {
     std::cout << "Cat operator= called" << std::endl;
+
+
     if (this != &copy)
+    {
+        *this->brain = *copy.brain;
         this->type = copy.type;
+    }
     return *this;
 }
 void Animal::makeSound() const
