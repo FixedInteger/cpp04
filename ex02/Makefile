@@ -3,7 +3,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = program
 
 SRC = Animal.cpp \
-	  main.cpp wrong.cpp
+	  main.cpp wrong.cpp \
+	  Brain.cpp \
 
 all: $(NAME)
 
@@ -12,5 +13,6 @@ $(NAME):
 
 clean:
 	rm -f $(NAME)
-
+fclean: clean
+	rm -f $(NAME)	
 re: clean all

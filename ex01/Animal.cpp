@@ -30,6 +30,7 @@ Dog::Dog() : Animal()
 {
     std::cout << "Dog default constructor called" << std::endl;
     this->type = "Dog";
+    this->brain = new Brain();
 }
 
 
@@ -37,6 +38,7 @@ Dog::Dog() : Animal()
 Dog::~Dog() 
 {
     std::cout << "Dog destructor called" << std::endl;
+    delete this->brain;
 }
 
 Dog::Dog(const Dog &copy) : Animal(copy)
@@ -57,16 +59,19 @@ Cat::Cat() : Animal()
 {
     std::cout << "Cat default constructor called" << std::endl;
     this->type = "Cat";
+    this->brain = new Brain();
 }
 
 Animal::~Animal()
 {
     std::cout << "Animal destructor called" << std::endl;
 
+
 }
 Cat::~Cat()
 {
     std::cout << "Cat destructor called" << std::endl;
+    delete this->brain;
 }
 
 Cat::Cat(const Cat &copy) : Animal(copy)
