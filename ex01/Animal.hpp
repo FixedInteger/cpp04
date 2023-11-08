@@ -1,8 +1,6 @@
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
-#include "Brain.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+#include <iostream>
 
  class Animal
  {

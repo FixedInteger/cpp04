@@ -1,7 +1,7 @@
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
-#include "Brain.hpp"
-# include <iostream>
+#include <iostream>
+
  class Animal
  {
     protected:
@@ -14,31 +14,6 @@
         std::string getType() const;
         virtual void makeSound() const = 0;
  };
-
- class Dog : public Animal
- {
-    private:
-        Brain *brain;
-     public:
-        Dog();
-        virtual ~Dog();
-        Dog(const Dog &copy);
-        Dog &operator=(const Dog &copy);
-        virtual void makeSound() const;
- };
-
-class Cat : public Animal
-{
-    private:
-        Brain *brain;
-    public:
-        Cat();
-        virtual ~Cat();
-        Cat(const Cat &copy);
-        Cat &operator=(const Cat &copy);
-        virtual void makeSound() const;
-};
-
 class WrongAnimal
 {
     protected:

@@ -29,8 +29,6 @@ std::string WrongAnimal::getType() const
     return this->type;
 }
 
-
-
 WrongCat::WrongCat() : WrongAnimal()
 {
     std::cout << "WrongCat default constructor called" << std::endl;

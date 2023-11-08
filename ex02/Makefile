@@ -1,10 +1,12 @@
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = program
 
 SRC = Animal.cpp \
 	  main.cpp wrong.cpp \
 	  Brain.cpp \
+	  Dog.cpp \
+	  Cat.cpp \
 
 all: $(NAME)
 
