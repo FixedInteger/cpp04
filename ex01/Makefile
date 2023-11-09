@@ -1,20 +1,22 @@
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = program
-
-SRC = Animal.cpp \
-	  main.cpp wrong.cpp \
-	  Brain.cpp \
-	  Dog.cpp \
-	  Cat.cpp \
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = $(wildcard *.cpp)
+OBJS = $(SRCS:.cpp=.o)
+HEADERS = $(wildcard *.hpp)
+NAME = ex01
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+%.o: %.cpp $(HEADERS)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -f $(NAME)
+	rm -f $(OBJS)
+
 fclean: clean
-	rm -f $(NAME)	
-re: clean all
+	rm -f $(NAME)
+
+re: fclean all

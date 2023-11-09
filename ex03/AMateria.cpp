@@ -28,7 +28,7 @@ AMateria &AMateria::operator=(const AMateria &copy)
 
 void AMateria::use(ICharacter &target)
 {
-    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+    std::cout << "this character uses  "<< this->_type<< "on " << target.getName() << " *" << std::endl;
 }
 std::string const &AMateria::getType() const
 {

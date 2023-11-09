@@ -3,7 +3,7 @@
 #include "Cat.hpp"
 void ff()
 {
-    system("leaks program");
+    system("leaks ex02");
 }
 int main()
 {
