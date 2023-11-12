@@ -54,8 +54,12 @@ void Character::unequip(int idx)
 {
     if (idx >= 0 && idx < 4)
     {
-        this->material[idx] = NULL;
-        this->count--;
+        if(!this->material[idx])
+        {
+            delete this->material[idx];
+            this->material[idx] = NULL;
+            this->count--;
+        }
     }
 }
 

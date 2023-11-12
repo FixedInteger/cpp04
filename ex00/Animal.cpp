@@ -38,10 +38,6 @@ void Animal::makeSound() const
     std::cout<<"Animal " <<"sound" << std::endl;
 }
 
-
-
-
-
 void WrongAnimal::makeSound() const
 {
     std::cout<<"WrongAnimal " <<"sound" << std::endl;
@@ -51,5 +47,3 @@ void WrongCat::makeSound() const
 {
     std::cout<<this->getType() <<"sound" << std::endl;
 }
-
-
